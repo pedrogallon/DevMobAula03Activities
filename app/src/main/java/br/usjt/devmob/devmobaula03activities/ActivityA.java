@@ -41,8 +41,8 @@ public class ActivityA extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_a);
         mActivityName = getString(R.string.activity_a);
-        mStatusView = (TextView)findViewById(R.id.status_view_a);
-        mStatusAllView = (TextView)findViewById(R.id.status_view_all_a);
+        mStatusView = findViewById(R.id.status_view_a);
+        mStatusAllView = findViewById(R.id.status_view_all_a);
         mStatusTracker.setStatus(mActivityName, getString(R.string.on_create));
         Utils.printStatus(mStatusView, mStatusAllView);
     }

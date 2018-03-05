@@ -19,7 +19,7 @@ class ActivityAKotlin: Activity(){
     private val mStatusTracker = StatusTracker.getInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        System.out.print("Está na parte de Kotlin")
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_a)
         mActivityName = getString(R.string.activity_a)
@@ -61,7 +61,7 @@ class ActivityAKotlin: Activity(){
     override fun onDestroy() {
         super.onDestroy()
         mStatusTracker.setStatus(mActivityName, getString(R.string.on_destroy))
-        mStatusTracker.clear()
+//        mStatusTracker.clear()
     }
 
     fun startDialog(v: View) {
